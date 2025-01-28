@@ -19,15 +19,15 @@
                         {
                             Id= 1,
                             Name = "Beef",
-                            Quality = "KEBS",
-                            Unit = "500 g",
+                            Quantity = 500.00,
+                            Unit = "grams",
                         },
                         new IngredientDto()
                         {
                             Id= 2,
                             Name = "Black Pepper",
-                            Quality = "KEBS",
-                            Unit = "1/4 tablespoon",
+                            Quantity = 0.25,
+                            Unit = "tablespoon",
                         }
                     }
                 },
@@ -40,17 +40,17 @@
                     {
                         new IngredientDto()
                         {
-                            Id= 3,
+                            Id= 1,
                             Name = "Meat",
-                            Quality = "KEBS",
-                            Unit = "1 kg",
+                            Quantity = 1.00,
+                            Unit = "kg",
                         },
                         new IngredientDto()
                         {
-                            Id= 4,
+                            Id= 2,
                             Name = "Tomato",
-                            Quality = "KEBS",
-                            Unit = "1 tomatoes",
+                            Quantity = 2.00,
+                            Unit = "tomatoes",
                         }
                     }
                 },
@@ -63,17 +63,17 @@
                     {
                         new IngredientDto()
                         {
-                            Id= 5,
+                            Id= 1,
                             Name = "Salt",
-                            Quality = "KEBS",
-                            Unit = "1/2 tablespoon",
+                            Quantity = 1.5,
+                            Unit = "tablespoon",
                         },
                         new IngredientDto()
                         {
-                            Id= 6,
+                            Id= 2,
                             Name = "Tumeric",
-                            Quality = "KEBS",
-                            Unit = "1 tablespoon",
+                            Quantity = 1.00,
+                            Unit = "tablespoon",
                         }
                     }
                 },
@@ -86,17 +86,17 @@
                     {
                         new IngredientDto()
                         {
-                            Id= 7,
+                            Id= 1,
                             Name = "Olive Oil",
-                            Quality = "KEBS",
-                            Unit = "10 ml",
+                            Quantity = 10.00,
+                            Unit = "ml",
                         },
                         new IngredientDto()
                         {
-                            Id= 8,
+                            Id= 2,
                             Name = "Tumeric",
-                            Quality = "KEBS",
-                            Unit = "1 tablespoon",
+                            Quantity = 1.00,
+                            Unit = "tablespoon",
                         }
                     }
                 },
@@ -109,17 +109,17 @@
                     {
                         new IngredientDto()
                         {
-                            Id= 9,
+                            Id= 1,
                             Name = "Sugar",
-                            Quality = "KEBS",
-                            Unit = "5 full tablespoon",
+                            Quantity = 5.00,
+                            Unit = "tablespoon",
                         },
                         new IngredientDto()
                         {
-                            Id= 10,
+                            Id= 2,
                             Name = "Baking Powder",
-                            Quality = "KEBS",
-                            Unit = "100 g",
+                            Quantity = 100.00,
+                            Unit = "g",
                         }
                     }
                 }

@@ -17,14 +17,14 @@ namespace RecipeApp.API.Controllers
         [HttpGet("{recipeId}")]
         public ActionResult<RecipeDto> GetRecipe(int recipeId)
         {
-            var recipeToReturn = RecipeDataStore.Instance.Recipes.FirstOrDefault(x => x.Id == recipeId);
+            var recipe = RecipeDataStore.Instance.Recipes.FirstOrDefault(x => x.Id == recipeId);
 
-            if (recipeToReturn == null)
+            if (recipe == null)
             {
-                return NotFound(recipeToReturn);
+                return NotFound();
             }
 
-            return Ok(recipeToReturn);
+            return Ok(recipe);
         }
     }
 }
