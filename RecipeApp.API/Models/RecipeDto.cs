@@ -1,18 +1,17 @@
-﻿namespace RecipeApp.API.Models
-{
-    public class RecipeDto
-    {
-        public int Id { get; set; }
-        public string Name { get; set; } = string.Empty;
-        public string? Description { get; set; }
+﻿namespace RecipeApp.API.Models;
 
-        public int NumberOfIngridients 
+public class RecipeDto
+{
+    public int Id { get; set; }
+    public string Name { get; set; } = string.Empty;
+    public string? Description { get; set; }
+
+    public int NumberOfIngridients
+    {
+        get
         {
-            get
-            {
-                return Ingredients.Count;
-            } 
+            return Ingredients.Count;
         }
-        public ICollection<IngredientDto> Ingredients { get; set; } = new List<IngredientDto>();
     }
+    public ICollection<IngredientDto> Ingredients { get; set; } = new List<IngredientDto>();
 }

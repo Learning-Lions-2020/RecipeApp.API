@@ -2,29 +2,35 @@
 using Microsoft.AspNetCore.Mvc;
 using RecipeApp.API.Models;
 
-namespace RecipeApp.API.Controllers
+namespace RecipeApp.API.Controllers;
+
+[Route("api/recipes")]
+[ApiController]
+public class RecipeController : ControllerBase
 {
-    [Route("api/recipes")]
-    [ApiController]
-    public class RecipeController : ControllerBase
+
+    private RecipeDataStore _recipeDataStore;
+    public RecipeController(RecipeDataStore recipeDataStore)
     {
-        [HttpGet]
-        public ActionResult<IEnumerable<RecipeDto>> GetRecipes()
+        _recipeDataStore = recipeDataStore;
+    }
+
+    [HttpGet]
+    public ActionResult<IEnumerable<RecipeDto>> GetRecipes()
+    {
+        return Ok(_recipeDataStore.Recipes);
+    }
+
+    [HttpGet("{recipeId}")]
+    public ActionResult<RecipeDto> GetRecipe(int recipeId)
+    {
+        var recipe = _recipeDataStore.Recipes.FirstOrDefault(x => x.Id == recipeId);
+
+        if (recipe == null)
         {
-            return Ok(RecipeDataStore.Instance.Recipes);
+            return NotFound();
         }
 
-        [HttpGet("{recipeId}")]
-        public ActionResult<RecipeDto> GetRecipe(int recipeId)
-        {
-            var recipe = RecipeDataStore.Instance.Recipes.FirstOrDefault(x => x.Id == recipeId);
-
-            if (recipe == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(recipe);
-        }
+        return Ok(recipe);
     }
 }
